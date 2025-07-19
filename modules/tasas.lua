@@ -1,7 +1,7 @@
 local tasas = {
     usd = 0.053,
     euro = 0.046,
-    yen = 8.00
+    yen = 0.13
 }
 return tasas
 
