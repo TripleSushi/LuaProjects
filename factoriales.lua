@@ -11,17 +11,23 @@ end
 
 local function operacion(number)
     local resultado = 1
-    for i = 2, number do
-        resultado = i * resultado
+
+    if number == 0 or number == 1 then
+        return 1
+    else
+        for i = 2, number do
+            resultado = i * resultado
+        end
     end
 
     return resultado
 end
 
 while true do
-    pregunta()
-
-    operacion()
+    local number = pregunta()
+    local factorial = operacion(number)
+    
+    print("El factorial de " .. number .. " es: " .. factorial)
 
     print("Deseas sacas el factorial de otro numero? (Responde 'y' o 'n' ): ")
     local respuesta = string.lower(io.read("*l"))
