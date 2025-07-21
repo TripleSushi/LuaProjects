@@ -1,11 +1,14 @@
 local function pregunta()
-    print("Ingresa tu numero: ")
-    local number = tonumber(io.read("*l"))
+    while true do 
+        print("Ingresa tu numero: ")
+        local input = io.read("*l"):match("^%s*(.-)%s*$")
+        local number = tonumber(input)
 
-    if type(number) ~= "number" or number < 0 or number ~= math.floor(number) then
-        error("Ingresa un numero entero positivo.")
-    else
-        return number
+        if number and number >= 0 and number == math.floor(number) then
+            return number
+        else
+            print("Ingresa un numero entero positivo válido. Intenta de nuevo.")
+        end
     end
 end
 
@@ -39,6 +42,5 @@ while true do
         break
     else
         print("Ingresa un input valido")
-        break
     end
 end
