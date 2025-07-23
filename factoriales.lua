@@ -4,10 +4,10 @@ local function pregunta()
         local input = io.read("*l"):match("^%s*(.-)%s*$")
         local number = tonumber(input)
 
-        if number and number >= 0 and number == math.floor(number) then
+        if number and number >= 0 and number <= 20 and number == math.floor(number) then
             return number
         else
-            print("Ingresa un numero entero positivo válido. Intenta de nuevo.")
+            print("Ingresa un numero entero positivo valido. Intenta de nuevo.")
         end
     end
 end
