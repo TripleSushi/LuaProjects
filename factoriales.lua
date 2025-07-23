@@ -29,7 +29,7 @@ end
 while true do
     local number = pregunta()
     local factorial = operacion(number)
-    
+
     print("El factorial de " .. number .. " es: " .. factorial)
 
     print("Deseas sacas el factorial de otro numero? (Responde 'y' o 'n' ): ")
