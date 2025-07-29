@@ -17,9 +17,9 @@ local function pregunta()
         if temp then
             local resultado = calc(temp, input)
             if input == "f" then
-                print(string.format("%.2f°C son %.2f°F", temp, resultado))
+                print(string.format("%.2fC son %.2fF", temp, resultado))
             elseif input == "c" then
-                print(string.format("%.2f°F son %.2f°C", temp, resultado))
+                print(string.format("%.2fF son %.2fC", temp, resultado))
             end
         else
             print("Ingresa un input valido")
